@@ -1,0 +1,14 @@
+# Secrets: never commit
+.env
+
+# Audit logs contain user data
+logs/
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+.pytest_cache/
