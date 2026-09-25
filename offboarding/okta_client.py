@@ -34,5 +34,20 @@ class OktaClient:
         resp.raise_for_status()
         return resp.json()
 
-    
-        
+    def revoke_sessions(self, user_id):
+        """This method logs the user out of everything."""
+        url = f"{self.base_url}/api/v1/users/{user_id}/sessions"
+        resp = self.session.delete(url, timeout=TIMEOUT_SECONDS)
+        resp.raise_for_status()
+
+    def remove_from_group(self, group_id, user_id):
+        """This removes user from ONE group"""
+        url = f"{self.base_url}/api/v1/groups/{group_id}/users/{user_id}"
+        resp = self.session.delete(url, timeout=TIMEOUT_SECONDS)
+        resp.raise_for_status()
+
+    def deactivate(self, user_id):
+        """Disables the account"""
+        url = f"{self.base_url}/api/v1/users/{user_id}/lifecycle/deactivate"
+        resp = self.session.post(url, timeout=TIMEOUT_SECONDS)
+        resp.raise_for_status()
