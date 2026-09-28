@@ -12,3 +12,6 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Local instructions for Claude Code (kept on this machine only)
+CLAUDE.md
