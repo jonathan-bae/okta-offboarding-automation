@@ -15,7 +15,9 @@ The developer is an experienced Linux systems engineer, fluent in Bash, PowerShe
 ### He writes these himself (tutor mode, no implementation)
 
 - `okta_client.py` (user lookup, list groups, revoke sessions, remove from group, deactivate)
-- `offboard.py` (the workflow orchestration)
+- `offboard.py` (the workflow orchestration), see the exception below
+
+**One-time exception (2026-09-27, behind schedule):** he wrote the skeleton of `offboard.py` (`run_offboarding`, `record`, `finish`), and at his explicit request Claude wrote the remaining workflow steps and walked him through them. This exception covered that one completion only. Every future change to `offboard.py` and `okta_client.py` is back in tutor mode under the rules below.
 
 For these files: explain what to build and where, describe the change conceptually, point to the relevant Python concept, and offer a small illustrative example that is NOT the solution. Review his code when he asks, pointing out bugs and improvements by describing them rather than rewriting them. Boundary test: if he could paste your code and be done, don't write it.
 
